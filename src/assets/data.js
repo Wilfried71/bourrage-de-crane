@@ -707,6 +707,11 @@ let data = [
                 id: 81,
                 value: "Bullied",
                 word: 51
+            },
+            {
+                id: 108,
+                value: "Harassed",
+                word: 51
             }
         ]
     },
@@ -931,7 +936,7 @@ let data = [
         translations: [
             {
                 id: 107,
-                value: "Wether",
+                value: "Whether",
                 word: 67
             }
         ]

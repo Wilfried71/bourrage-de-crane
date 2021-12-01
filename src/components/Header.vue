@@ -1,14 +1,15 @@
 <template>
-  <p>Hello world {{ msg }}</p>
+  <h1>{{ msg }}</h1>
+  <hr class="mb-4">
 </template>
 
 <script>
 export default {
-  name: 'Header',
+  name: "Header",
   props: {
-    msg: String
-  }
-}
+    msg: String,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
