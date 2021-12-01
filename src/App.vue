@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container mt-2">
+    <h1>Bourrage de crâne anglais</h1>
+    <hr>
+    <table class="table table-dark">
+      <tr>
+        <td><b>Mot</b></td>
+        <td><b>Traductions</b></td>
+      </tr>
+      <tr v-for="(d,dkey) of data" :key="dkey">
+        <td>{{ d.value }}</td>
+        <td>
+          <ul>
+            <li v-for="(trad, tkey) of d.translations" :key="tkey">{{ trad.value }}</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+    <Header></Header>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import data from "./assets/data.js"
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Header,
+  },
+  data() {
+    return {
+      data: data
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
